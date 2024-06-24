@@ -5,12 +5,16 @@ export default defineNuxtConfig({
   app: {
     head: {
       title: "Nuxt Dojo",
-      meta: [
-        { name: "description", content: "Everything about Nuxt.js"}
-      ],
+      meta: [{ name: "description", content: "Everything about Nuxt.js" }],
       link: [
-        { rel: 'stylesheet', href: 'https://fonts.googleapis.com/icon?family=Material+Icons' }
-      ]
-    }
-  }
-})
+        {
+          rel: "stylesheet",
+          href: "https://fonts.googleapis.com/icon?family=Material+Icons",
+        },
+      ],
+    },
+  },
+  runtimeConfig: {
+    currencyKey: process.env.CURRENCY_API_KEY,
+  },
+});
